@@ -11,4 +11,15 @@ public class Enemy extends IconOnScreen{
     setX(x);
     setY(y);
   }
+
+  public void move(int dx) {
+    setDx(dx);
+    if (getX() < 0) {
+      setX(Options.screenWidth - Options.WIDTH_OF_ENEMY * 2);
+    } else if (getX() > Options.screenWidth - Options.WIDTH_OF_ENEMY * 2) {
+      setX(0);
+    } else {
+      setX(getX() + getDx());
+    }
+  }
 }

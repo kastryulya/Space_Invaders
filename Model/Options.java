@@ -15,10 +15,13 @@ public interface Options {
   int WIDTH_OF_PLAYER = 50;
   int HEIGHT_OF_PLAYER = 50;
 
-  int WIDTH_OF_FIREBALL = 15;
-  int HEIGHT_OF_FIREBALL = 15;
+  int WIDTH_OF_FIREBALL_PLAYER = 15;
+  int HEIGHT_OF_FIREBALL_PLAYER = 15;
 
-  double COEF_DEFEAT = 0.7;
+  int WIDTH_OF_FIREBALL_ENEMY = 20;
+  int HEIGHT_OF_FIREBALL_ENEMY = 20;
+
+  double COEF_DEFEAT = 0.5;
   int I_ENEMIES = 4;
   int J_ENEMIES = 6;
 
