@@ -2,9 +2,9 @@ package Model;
 
 import javax.swing.ImageIcon;
 
-public class FireBall extends IconOnScreen {
+public class FireBallPlayer extends IconOnScreen {
 
-  public FireBall(int x, int y) {
+  public FireBallPlayer(int x, int y) {
     super();
     setImage(new ImageIcon(
         "/Users/ulya/Desktop/Матмех/4 семестр/Space_Invaders/Images/fireball.png").getImage());
@@ -15,7 +15,7 @@ public class FireBall extends IconOnScreen {
 
   public void move() {
     if (getY() > 0) {
-      setY(getY() - 5);
+      setY(getY() - 20);
     } else {
       die();
     }
