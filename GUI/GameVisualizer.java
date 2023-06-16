@@ -89,11 +89,11 @@ public class GameVisualizer extends JPanel {
 
     ArrayList<FireBallEnemy> fireBallEnemies = gameModel.getFireBallEnemies();
 
-    for (FireBallEnemy fireBallEnemie : fireBallEnemies) {
-      if (fireBallEnemie != null) {
-        g.drawImage(fireBallEnemie.getImage(),
-            fireBallEnemie.getX(),
-            fireBallEnemie.getY(),
+    for (int i = 0; i < fireBallEnemies.size(); i++) {
+      if (fireBallEnemies.get(i) != null) {
+        g.drawImage(fireBallEnemies.get(i).getImage(),
+            fireBallEnemies.get(i).getX(),
+            fireBallEnemies.get(i).getY(),
             Options.WIDTH_OF_FIREBALL_ENEMY,
             Options.HEIGHT_OF_FIREBALL_ENEMY, this);
       }
@@ -103,7 +103,7 @@ public class GameVisualizer extends JPanel {
   private void drawGameIsOver(Graphics2D g) {
     if (gameModel.playerIsWinner()) {
       Image icon = new ImageIcon(
-          "/Users/ulya/Desktop/Матмех/4 семестр/Space_Invaders/Images/youWin.png").getImage();
+          "/Users/ulya/Desktop/Матмех/4 семестр/Space_Invaders/Images/win.png").getImage();
       g.drawImage(icon,
           (int) (Options.screenWidth * 0.2), (int) (Options.screenHeight * 0.2),
           (int) (Options.screenWidth * 0.5), (int) (Options.screenHeight * 0.5),
